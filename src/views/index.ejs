@@ -35,9 +35,9 @@
             Você tem 2 horas livres no seu dia
           </span>
           <a href="/profile" id="avatar-profile">
-            <p>Jakeliny <span>Ver perfil</span></p>
+            <p>Hígor <span>Ver perfil</span></p>
             <img
-              src="https://avatars.githubusercontent.com/u/17316392?s=460&u=6912a91a70bc89745a2079fdcdad3bc3ce370f13&v=4"
+              src="http://github.com/higorcos.png"
             />
           </a>
         </section>
@@ -76,57 +76,32 @@
         <h1 class="sr-only">Trabalhos</h1>
 
         <div class="cards">
-          <div class="card progress" data-id="1">
-            <div class="id column">1</div>
-            <div class="name column">
-              Pizzaria Guloso
-            </div>
-            <div class="deadline column">
-              <span>Prazo</span>
-              <p>3 dias para a entrega</p>
-            </div>
-            <div class="amount column">
-              <span>Valor</span>
-              <p>R$ 4500,00</p>
-            </div>
-            <div class="status badge column">
-              Em andamento
-            </div>
-            <div class="actions column flex">
-              <p class="sr-only">Ações</p>
-              <a 
-                href="/job/edit" 
-                class="button white edit" 
-                title="Editar Job">
-                <img src="/images/edit-24.svg" alt="Editar Job" />
-              </a>
-              <button class="delete button white" title="Excluir Job">
-                <img src="/images/trash-24.svg" alt="Excluir Job" />
-              </button>
-            </div>
-          </div>
-          <!-- end card -->
+          <% jobs.forEach((job) => { %> 
 
-          <div class="card done" data-id="2">
-            <div class="id column">2</div>
-            <div class="name column">
-              OneTwo Project
-            </div>
+          <div class="card <%= job.status %> " data-id="<%=job.id%>">
+            <div class="id column"><%=job.id%></div>
+            <div class="name column"><%= job.name %></div>
             <div class="deadline column">
               <span>Prazo</span>
-              <p>3 dias para a entrega</p>
+              <p>
+                <% if(job.deadline == 0){ %> 
+                  Prazo encerrado
+                  <% }else{%>
+                    <%=job.deadline%> 
+                    dias para a entrega 
+                    <%} %> 
+              </p>
             </div>
             <div class="amount column">
               <span>Valor</span>
-              <p>R$ 4500,00</p>
+              <p>R$ <%=job.budget.toFixed(2).replace('.',',') %> </p>
             </div>
             <div class="status badge column">
-              Encerrado
+              <%= job.status === 'done' ? 'Encerrado' : 'Em andamento' %> 
             </div>
             <div class="actions column flex">
               <p class="sr-only">Ações</p>
-              <a 
-                href="/job/edit" 
+              <a href="/job/<%= job.id%> " 
                 class="button white edit" 
                 title="Editar Job">
                 <img src="/images/edit-24.svg" alt="Editar Job" />
@@ -136,34 +111,40 @@
               </button>
             </div>
           </div>
+          <%})%> 
+          <!-- end card -->
+          
         </div>
         <!-- end cards -->
       </main>
     </div>
     <!-- end container -->
-
+    
     <div class="modal-wrapper">
       <div class="modal">
         <img src="/images/trash-48.svg" alt="Excluir Job" title="Excluir Job" />
         <h3>Excluir Job</h3>
         <p>Quer mesmo excluir esse job? <br/>
-        Ele será apagado para sempre.  
-        <p>
-        <footer>
-          <a 
-            class="button gray" 
+          Ele será apagado para sempre.  
+          <p>
+            <footer>
+              <a 
+              class="button gray" 
             href="#">Cancelar</a>
-          <button
+            <button
             class="button red"
             type="submit"
             form="delete-job">Excluir Job</button>
-        </footer>
-      </div>
-      <form 
+          </footer>
+        </div>
+        <% jobs.forEach((job) => { %> 
+        <form 
         method="post" 
-        action="/job/delete" 
+        action="/job/delete/<%= job.id %> " 
         id="delete-job"></form>
-    </div>
+      </div>
+      <%})%> 
+
     <!-- end modal-wrapper -->
   </body>
 </html>
