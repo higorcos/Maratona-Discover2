@@ -49,6 +49,7 @@ const Job = {
       'daily-hours': 2,
       'total-hours': 1,
       created_at: Date.now(),
+      annotations: '11111111111',
     
     },
     {
@@ -57,6 +58,8 @@ const Job = {
       'daily-hours': 5,
       'total-hours': 90,
       created_at: Date.now(),
+      annotations: '222222222222',
+      
      
     },
     {
@@ -65,6 +68,7 @@ const Job = {
       'daily-hours': 9,
       'total-hours': 30,
       created_at: Date.now(),
+      annotations: '33333333333',
       
     },
   ],
@@ -76,16 +80,18 @@ const Job = {
       const updatedJobs = Job.data.map((job) => { //vai criar um novo job com o map 
         const deadline = Job.services.deadlineDay(job) // função prazo, que está dentro do objeto >>> services
         const status = deadline <= 0 ? 'done' : 'progress' // se <= 0 é done se não progress 
-
+        //const annotations = 'nada'
+        
         return {
           ...job, //joga tudo em um novo objeto
           deadline,
           status,
+         // annotations,//provavelmente nem precisa pois a dados ja vão vim com as anotações 
           budget: Job.services.calculateBudget(job, Profile.data['value-hours']) //Custo do trabalho
            
         }
+        
       })
-
       return res.render(views + "index", { jobs: updatedJobs })
     },
     createJob(req, res) {
@@ -100,6 +106,7 @@ const Job = {
         name: req.body['name'],
         'daily-hours': req.body['daily-hours'],
         'total-hours': req.body['total-hours'],
+        annotations: req.body['annotations'],
         created_at: Date.now(), //vai atribuir a data em milisegundos da criação 
       })
 
@@ -130,6 +137,7 @@ const Job = {
           name: req.body.name,
           'total-hours': req.body['total-hours'],
           'daily-hours': req.body['daily-hours'],
+          annotations: req.body['annotations'],
         }
         //manda as alterações do novo objeto para o antigo, que é usado pelas outras rotas "job"
         Job.data = Job.data.map(job => {
