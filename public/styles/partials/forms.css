@@ -27,6 +27,9 @@ form .input-group {
 form .input-group .input-wrapper + .input-wrapper {
   margin-left: 1.5rem;
 }
+form .input-group .input-wrapper2 + .input-wrapper2 {
+  margin-left: 1.5rem;
+}
 
 label {
   display: inline-block;
@@ -57,6 +60,6 @@ input {
 ::placeholder {
   color: #BFBFCC;
 }
-.input-wrapper{
+.input-wrapper2{
   width: 50%;
 }

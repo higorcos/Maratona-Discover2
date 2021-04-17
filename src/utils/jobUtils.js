@@ -13,7 +13,7 @@ module.exports = {
       const timeDifMs = endDateMS - Date.now(); //diferença em milisegundos dia do fim - dia atual
       //transformando a diferença de milesegundos em dias
       const dayMs = 1000 * 60 * 60 * 24;
-      const dayDif = Math.floor(timeDifMs / dayMs); //prazo para o fim do projeto em dias
+      const dayDif = Math.ceil(timeDifMs / dayMs); //prazo para o fim do projeto em dias
 
       return dayDif;
     },
