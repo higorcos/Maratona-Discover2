@@ -84,17 +84,19 @@
     <div class="container">
       <main class="animate-up delay-2">
         <h1 class="sr-only">Trabalhos</h1>
-
         <div class="cards">
+
+          <% number = 0 %> 
           <% jobs.forEach((job) => { %> 
 
           <div class="card <%= job.status %> " data-id="<%=job.id%>">
-            <div class="id column"><%=job.id%></div>
+            <% number++ %> 
+            <div class="id column"><%=number%></div>
             <div class="name column"><%= job.name %></div>
             <div class="deadline column">
               <span>Prazo</span>
               <p>
-                <% if(job.deadline == 0){ %> 
+                <% if(job.deadline <= 0){ %> 
                   Prazo encerrado
                   <% }else{%>
                     <%=job.deadline%> 
