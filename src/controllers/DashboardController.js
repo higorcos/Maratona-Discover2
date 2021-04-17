@@ -3,11 +3,11 @@ const Profile = require('../model/Profile')
 const JobUtils = require('../utils/jobUtils')
 
 module.exports = {
-  index(req, res) {
+  async index(req, res) {
     // index: function {}  || index: () => {}
     //página inicial
-    const jobs = Job.get(); // vai pegar o "data" do job no model
-    const profile = Profile.get(); // vai pegar  o "data" do profile no model
+    const jobs = await Job.get(); // vai pegar o "data" do job no model
+    const profile = await Profile.get(); // vai pegar  o "data" do profile no model
 
     let statusCount = {
         progress: 0,
