@@ -38,9 +38,11 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer, onde é possível cadastrar e excluir jobs (projetos), obtendo uma estimativa de custo de cada job. Além disso, é possível traçar o valor da hora da pessoa que estará usando o sistema 💰
 
-## 📈  Melhorias
+## 📈 Melhorias
+
 No total fiz três melhorias no projeto:
 1- Bloco de anotações na parte de criação e edição de jobs;
+ <img alt="Melhorias" src="https://github.com/higorcos/Maratona-Discover2/blob/main/public/images/Job%20anota%C3%A7%C3%B5es.png?raw=true"/>
 2- A notificação de horas de trabalho e tempo livre está mais detalhada;
 3- Os ids dos jobs na home seguem o número de itens na home e não o id do banco de dados;
 
@@ -50,7 +52,7 @@ Você pode visualizar o layout do projeto através [desse link](https://www.figm
 
 ## :memo: Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](.github/LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
 
 ---
 
