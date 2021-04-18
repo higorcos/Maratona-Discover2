@@ -41,6 +41,7 @@ O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer
 ## 📈 Melhorias
 
 No total fiz três melhorias no projeto:
+
 1- Bloco de anotações na parte de criação e edição de jobs;
 <p align="center">
  <img alt="Melhorias" src="https://github.com/higorcos/Maratona-Discover2/blob/main/public/images/Job%20anota%C3%A7%C3%B5es.png?raw=true"/>
