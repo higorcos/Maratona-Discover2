@@ -54,7 +54,7 @@ No total fiz três melhorias no projeto:
  </p>
 3- Os ids dos jobs na home seguem o número de itens na home e não o id do banco de dados;
     <p align="center">
- <img alt="Melhorias" src="public/images/id.png" width="50%" height="24" />
+ <img alt="Melhorias" src="public/images/id.png" width="50%"/>
  </p>
 
 ## 🔖 Layout
