@@ -19,7 +19,7 @@
 <br>
 
 <p align="center">
-  <img alt="dev.finances" src="https://github.com/higorcos/Maratona-Discover2/blob/main/public/images/tela%201.png?raw=true" width="100%">
+  <img alt="dev.finances" src="public/images/home.png" width="50%">
 </p>
 
 ## 🚀 Tecnologias
@@ -44,18 +44,26 @@ No total fiz três melhorias no projeto:
 
 1- Bloco de anotações na parte de criação e edição de jobs;
 <p align="center">
- <img alt="Melhorias" src="https://github.com/higorcos/Maratona-Discover2/blob/main/public/images/Job%20anota%C3%A7%C3%B5es.png?raw=true"/>
+ <img alt="Melhorias" src="public/images/Job anotações.png" width="50%"/>
  </p>
 2- A notificação de horas de trabalho e tempo livre está mais detalhada;
+  <p align="center">
+ <img alt="Melhorias" src="public/images/noti1.png" width="50%"/>
+ <img alt="Melhorias" src="public/images/noti2.png" width="50%"/>
+ <img alt="Melhorias" src="public/images/noti3.png" width="50%"/> 
+ </p>
 3- Os ids dos jobs na home seguem o número de itens na home e não o id do banco de dados;
+    <p align="center">
+ <img alt="Melhorias" src="public/images/id.png" width="50%" height="24" />
+ </p>
 
 ## 🔖 Layout
 
 Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/s4fytPFbDiSkv4GPSfKaLE/Jobs-Planning). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
 
-## :memo: Licença
+## Licença
 
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/higorcos/Maratona-Discover2/blob/main/LICENSE) para mais detalhes.
 
 ---
 
