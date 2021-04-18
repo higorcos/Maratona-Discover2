@@ -19,7 +19,7 @@
 <br>
 
 <p align="center">
-  <img alt="dev.finances" src=".github/jobscalc.png" width="100%">
+  <img alt="dev.finances" src="https://github.com/higorcos/Maratona-Discover2/blob/main/public/images/tela%201.png?raw=true" width="100%">
 </p>
 
 ## 🚀 Tecnologias
@@ -42,7 +42,9 @@ O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer
 
 No total fiz três melhorias no projeto:
 1- Bloco de anotações na parte de criação e edição de jobs;
+<p align="center">
  <img alt="Melhorias" src="https://github.com/higorcos/Maratona-Discover2/blob/main/public/images/Job%20anota%C3%A7%C3%B5es.png?raw=true"/>
+ </p>
 2- A notificação de horas de trabalho e tempo livre está mais detalhada;
 3- Os ids dos jobs na home seguem o número de itens na home e não o id do banco de dados;
 
